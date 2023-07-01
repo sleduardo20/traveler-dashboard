@@ -7,7 +7,7 @@ export const globalStyles = globalCss({
     margin: 0,
   },
 
-  hmml: {
+  html: {
     fontSize: '62.5%',
   },
 

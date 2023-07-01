@@ -1,5 +1,12 @@
 import { createStitches, defaultThemeMap } from '@stitches/react';
-import { colors, fontSizes, fontWeights, fonts, space } from './theme';
+import {
+  colors,
+  fontSizes,
+  fontWeights,
+  fonts,
+  space,
+  lineHeights,
+} from './theme';
 
 export const {
   styled,
@@ -22,5 +29,6 @@ export const {
     fontWeights,
     fonts,
     space,
-  },
+    lineHeights,
+  } as const,
 });
