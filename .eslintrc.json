@@ -17,6 +17,8 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".tsx",".ts"] }],
     "no-shadow":"off",
+    "react/require-default-props":"off",
+    "eslint-disable jsx-a11y/alt-text":"off",
     "import/extensions": [1, { "extensions": [".ts"] }],
     "import/no-extraneous-dependencies": ["off"],
     "react/jsx-props-no-spreading": ["off"],
