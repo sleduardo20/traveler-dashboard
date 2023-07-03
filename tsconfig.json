@@ -24,7 +24,7 @@
       "@/application/*": ["../application/*"],
       "@/infrastructure/*": ["../infrastructure/*"],
       "@/presentation/*": ["../presentation/*"],
-      "@/components/*": ["../presentation/components/*"],
+      "@/components/*": ["../../components/*"],
       "@/pages/*": ["./pages/*"],
       
     }
