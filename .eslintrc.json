@@ -17,7 +17,9 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".tsx",".ts"] }],
     "no-shadow":"off",
+    "react/display-name":"off",
     "react/require-default-props":"off",
+    "jsx-a11y/label-has-associated-control":"off",
     "eslint-disable jsx-a11y/alt-text":"off",
     "import/extensions": [1, { "extensions": [".ts"] }],
     "import/no-extraneous-dependencies": ["off"],
