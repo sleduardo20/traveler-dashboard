@@ -25,8 +25,7 @@
       "@/infrastructure/*": ["../infrastructure/*"],
       "@/presentation/*": ["../presentation/*"],
       "@/components/*": ["../../components/*"],
-      "@/pages/*": ["./pages/*"],
-      
+      "@/pages/*": ["./pages/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

@@ -31,9 +31,9 @@ export function InputSingIn({
 
       {showEyeIcon &&
         (showPassword ? (
-          <FiEye onClick={changeViewPassword} size={24} />
-        ) : (
           <FiEyeOff onClick={changeViewPassword} size={24} />
+        ) : (
+          <FiEye onClick={changeViewPassword} size={24} />
         ))}
     </InputContainer>
   );

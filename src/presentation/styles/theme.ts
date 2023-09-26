@@ -12,6 +12,7 @@ const tokens = {
   },
   fontSizes: {
     sm: '1.6rem',
+    xsm: '1.4rem',
     md: '2rem',
     lg: '3.6rem',
     xlg: '4rem',

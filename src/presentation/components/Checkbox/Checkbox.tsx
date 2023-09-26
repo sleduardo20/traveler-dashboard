@@ -41,7 +41,7 @@ const CheckboxContainer = styled('div', {
   },
 
   label: {
-    color: '$text',
+    color: '$textComplements',
     marginLeft: '$xxsm',
     fontSize: '$sm',
     lineHeight: '$md',
