@@ -1,6 +1,5 @@
 import { useFormContext } from 'react-hook-form';
 import { FaCheck } from 'react-icons/fa';
-import { useRef } from 'react';
 import { styled } from '../../styles';
 
 interface InputCheckboxProps {
