@@ -8,6 +8,8 @@ import { InputSingIn } from '../../components/Input';
 import { InputCheckbox } from '../../components/Checkbox';
 import { CommonButton } from '../../components/Buttons';
 import { FormAlert } from '../../components/FormAlert';
+import { useEffect } from 'react';
+import { Notification } from '../../components/Notification/Notification';
 
 export interface SignInProps {
   imageUrl: string;
@@ -23,6 +25,16 @@ export const SignIn = ({ imageUrl }: SignInProps) => {
   } = methods;
 
   console.log(errors);
+
+  useEffect(() => {
+    if (errors.email?.message) {
+      Notification.error(errors.email.message);
+    }
+
+    if (errors.password?.message) {
+      Notification.error(errors.password.message);
+    }
+  }, [errors]);
 
   const signIn = (data: SignInFormProps) => console.log(data);
 

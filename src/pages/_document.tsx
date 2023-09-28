@@ -11,6 +11,10 @@ export default function Document() {
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
 
         <link
           href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap"

@@ -1,4 +1,4 @@
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { GetServerSideProps } from 'next';
 import { SignIn, SignInProps } from '../presentation/views/SignIn/SignIn';
 
 export default function Home({ imageUrl }: SignInProps) {
