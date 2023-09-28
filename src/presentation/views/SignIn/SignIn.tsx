@@ -10,6 +10,7 @@ import { CommonButton } from '../../components/Buttons';
 import { FormAlert } from '../../components/FormAlert';
 import { useEffect } from 'react';
 import { Notification } from '../../components/Notification/Notification';
+import { useRouter } from 'next/router';
 
 export interface SignInProps {
   imageUrl: string;
@@ -20,11 +21,11 @@ export const SignIn = ({ imageUrl }: SignInProps) => {
     resolver: zodResolver(signInFormSchema),
   });
 
-  const {
-    formState: { errors, isValid, isValidating },
-  } = methods;
+  const navigator = useRouter();
 
-  console.log(errors);
+  const {
+    formState: { errors },
+  } = methods;
 
   useEffect(() => {
     if (errors.email?.message) {
@@ -36,7 +37,9 @@ export const SignIn = ({ imageUrl }: SignInProps) => {
     }
   }, [errors]);
 
-  const signIn = (data: SignInFormProps) => console.log(data);
+  const signIn = (data: SignInFormProps) => {
+    navigator.push('/listCities');
+  };
 
   return (
     <SignInContainer>

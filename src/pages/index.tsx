@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import { SignIn, SignInProps } from '../presentation/views/SignIn/SignIn';
 
 export default function Home({ imageUrl }: SignInProps) {
@@ -9,7 +9,7 @@ export default function Home({ imageUrl }: SignInProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       imageUrl:

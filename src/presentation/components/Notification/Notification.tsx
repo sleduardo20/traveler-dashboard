@@ -1,7 +1,6 @@
 import { Store, iNotification } from 'react-notifications-component';
 
 const notification: iNotification = {
-  title: 'Wonderful!',
   insert: 'top',
   container: 'top-right',
   animationIn: ['animate__animated', 'animate__fadeInRight'],

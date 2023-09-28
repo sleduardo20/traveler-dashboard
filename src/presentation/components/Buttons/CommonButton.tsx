@@ -44,7 +44,10 @@ const ButtonContainer = styled('button', {
 
   variants: {
     size: {
-      small: {},
+      small: {
+        width: '4rem',
+        height: '4rem',
+      },
       normal: {},
       large: {
         width: '41.6rem',
