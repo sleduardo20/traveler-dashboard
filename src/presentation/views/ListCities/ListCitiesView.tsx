@@ -1,4 +1,7 @@
-import { CityCard } from '../../components/CityCard/CityCard';
+import { Pages } from '../../../entities/Pages';
+import { CityCard } from '../../components/CityCard';
+import { Header } from '../../components/Header';
+import { styled } from '../../styles';
 
 export const ListCitiesView = () => {
   const props = {
@@ -11,8 +14,13 @@ export const ListCitiesView = () => {
   };
 
   return (
-    <div style={{ padding: 200, background: 'black' }}>
-      <CityCard {...props} />
-    </div>
+    <Container>
+      <Header page={Pages.LIST_CITIES} goProfile={() => {}} />
+    </Container>
   );
 };
+
+const Container = styled('main', {
+  background: '$background',
+  height: '100vh',
+});

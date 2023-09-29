@@ -17,7 +17,7 @@ export function CommonButton({
 }: CommonButtonProps) {
   return (
     <ButtonContainer color={color} size={size} {...props}>
-      {text && <small>{text}</small>} {icon && icon}
+      {icon && icon} {text && <small>{text}</small>}
     </ButtonContainer>
   );
 }
@@ -28,9 +28,11 @@ const ButtonContainer = styled('button', {
   justifyContent: 'center',
   borderRadius: '1rem',
   border: 'none',
+  fontFamily: 'Roboto',
 
   small: {
     fontSize: '$sm',
+    marginLeft: '$xxsm',
   },
 
   '&:disabled': {
@@ -48,7 +50,10 @@ const ButtonContainer = styled('button', {
         width: '4rem',
         height: '4rem',
       },
-      normal: {},
+      normal: {
+        width: '21.4rem',
+        height: '4.8rem',
+      },
       large: {
         width: '41.6rem',
         height: '7.2rem',
@@ -59,8 +64,19 @@ const ButtonContainer = styled('button', {
         background: '$orange',
         color: '$white',
       },
-      secondary: {},
-      ternary: {},
+      secondary: {
+        background: '$green',
+        color: '$white',
+      },
+      ternary: {
+        background: '$white',
+        color: '$textComplements',
+        border: '0.1rem solid $black100',
+
+        svg: {
+          color: '$text',
+        },
+      },
     },
   },
 });

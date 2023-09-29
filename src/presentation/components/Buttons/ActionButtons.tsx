@@ -3,8 +3,8 @@ import { styled } from '../../styles';
 import { CommonButton } from './CommonButton';
 
 interface ActionButtonProps {
-  onEdit: () => void;
-  onDelete: () => void;
+  onEdit?: () => void;
+  onDelete?: () => void;
 }
 
 export const ActionButtons = ({ onDelete, onEdit }: ActionButtonProps) => {
@@ -32,7 +32,7 @@ const ButtonsActions = styled('div', {
 
   '& button': {
     border: '0.1rem solid  $black100',
-    backgroundColor: '$background',
+    backgroundColor: '$white',
     borderTopRightRadius: 0,
     borderBottomRightRadius: 0,
 

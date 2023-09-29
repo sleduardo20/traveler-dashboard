@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { styled } from '../../styles';
-import { ActionButtons } from '../Buttons/ActionButtons';
+import { ActionButtons } from '../Buttons';
 
 interface CityCardProps {
   onEdit: () => void;
@@ -46,7 +46,7 @@ const CityCardContainer = styled('div', {
   height: '26.6rem',
   borderRadius: '1.6rem',
   border: '0.1rem solid $black100',
-  background: '$background',
+  background: '$white',
 
   h3: {
     marginTop: '$sm',
