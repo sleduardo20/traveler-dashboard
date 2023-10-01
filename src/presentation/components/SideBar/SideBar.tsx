@@ -36,5 +36,6 @@ const Container = styled('div', {
 
   svg: {
     color: '$white',
+    cursor: 'pointer',
   },
 });

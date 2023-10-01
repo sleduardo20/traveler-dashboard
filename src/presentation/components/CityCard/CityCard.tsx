@@ -47,6 +47,7 @@ const CityCardContainer = styled('div', {
   borderRadius: '1.6rem',
   border: '0.1rem solid $black100',
   background: '$white',
+  cursor: 'pointer',
 
   h3: {
     marginTop: '$sm',

@@ -1,7 +1,5 @@
-import { Pages } from '../../../entities/Pages';
 import { CityCard } from '../../components/CityCard';
-import { Header } from '../../components/Header';
-import { SideBar } from '../../components/SideBar';
+import { LayoutDefault } from '../LayoutDefault/LayoutDefault';
 import { styled } from '../../styles';
 
 export const ListCitiesView = () => {
@@ -15,24 +13,24 @@ export const ListCitiesView = () => {
   };
 
   return (
-    <Container>
-      <Header
-        page={Pages.LIST_CITIES}
-        goProfile={() => {}}
-        title="Edit"
-        subtitle="Blumenau"
-      />
-      <SideBar
-        onCities={() => {}}
-        onComments={() => {}}
-        onLocal={() => {}}
-        onPower={() => {}}
-      />
-    </Container>
+    <LayoutDefault>
+      <Content>
+        <CityCard {...props} />
+        <CityCard {...props} />
+        <CityCard {...props} />
+        <CityCard {...props} />
+        <CityCard {...props} />
+      </Content>
+    </LayoutDefault>
   );
 };
 
-const Container = styled('main', {
-  background: '$background',
-  height: '100vh',
+const Content = styled('div', {
+  paddingLeft: '20.8rem',
+  paddingRight: '11.2rem',
+  paddingTop: '4.8rem',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(5,25.6rem)',
+  justifyContent: 'space-between',
+  rowGap: 'calc($lg + $md)',
 });
