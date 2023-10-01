@@ -8,8 +8,10 @@ interface HeaderProps {
   goProfile?: () => void;
   onDelete?: () => void;
   onEdit?: () => void;
+  goBack?: () => void;
   step?: 1 | 2;
   title?: string;
+  subtitle?: string;
   page: Pages;
 }
 
@@ -19,6 +21,8 @@ export const Header = ({
   goProfile,
   onDelete,
   onEdit,
+  goBack,
+  subtitle,
   page,
 }: HeaderProps) => {
   return (
@@ -27,9 +31,20 @@ export const Header = ({
         <ContentListCities goProfile={goProfile} />
       )}
       {page === Pages.PROFILE_CIY && (
-        <ContentProfileCity onDelete={onDelete} onEdit={onEdit} />
+        <ContentProfileCity
+          onDelete={onDelete}
+          onEdit={onEdit}
+          goBack={goBack}
+        />
       )}
-      {page === Pages.FORM_ADD && <ContentToForms step={step} title={title} />}
+      {page === Pages.FORM && (
+        <ContentToForms
+          step={step}
+          title={title}
+          subtitle={subtitle}
+          goBack={goBack}
+        />
+      )}
     </HeaderContainer>
   );
 };
@@ -52,9 +67,14 @@ const HeaderContainer = styled('header', {
     color: '$textTitle',
   },
 
-  h3: {
+  'h3,h4': {
     fontSize: '$md',
-    fontWeight: '$normal',
+    fontWeight: '$bold',
     color: '$textComplements',
+  },
+
+  h4: {
+    fontSize: '$sm',
+    fontWeight: '$normal',
   },
 });

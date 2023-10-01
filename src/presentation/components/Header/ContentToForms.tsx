@@ -4,12 +4,14 @@ import { styled } from '../../styles';
 
 interface ContentToFormsProps {
   title?: string;
+  subtitle?: string;
   step?: 1 | 2;
   goBack?: () => void;
 }
 
 export const ContentToForms = ({
   title,
+  subtitle,
   step,
   goBack,
 }: ContentToFormsProps) => {
@@ -24,11 +26,15 @@ export const ContentToForms = ({
 
       <h3>{title}</h3>
 
-      <Steps>
-        <Step step={step}>1</Step>
-        <span> - </span>
-        <Step step={step}>2</Step>
-      </Steps>
+      {subtitle && <h4>{subtitle}</h4>}
+
+      {step && (
+        <Steps>
+          <Step step={step}>1</Step>
+          <span> - </span>
+          <Step step={step}>2</Step>
+        </Steps>
+      )}
     </>
   );
 };

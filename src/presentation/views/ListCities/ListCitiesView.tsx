@@ -1,6 +1,7 @@
 import { Pages } from '../../../entities/Pages';
 import { CityCard } from '../../components/CityCard';
 import { Header } from '../../components/Header';
+import { SideBar } from '../../components/SideBar';
 import { styled } from '../../styles';
 
 export const ListCitiesView = () => {
@@ -15,7 +16,18 @@ export const ListCitiesView = () => {
 
   return (
     <Container>
-      <Header page={Pages.LIST_CITIES} goProfile={() => {}} />
+      <Header
+        page={Pages.LIST_CITIES}
+        goProfile={() => {}}
+        title="Edit"
+        subtitle="Blumenau"
+      />
+      <SideBar
+        onCities={() => {}}
+        onComments={() => {}}
+        onLocal={() => {}}
+        onPower={() => {}}
+      />
     </Container>
   );
 };
