@@ -14,13 +14,13 @@ export const ActionButtons = ({ onDelete, onEdit }: ActionButtonProps) => {
         onClick={onEdit}
         size="small"
         color="secondary"
-        icon={<FiEdit />}
+        icon={<FiEdit size={18} />}
       />
       <CommonButton
         onClick={onDelete}
         size="small"
         color="secondary"
-        icon={<FiTrash2 />}
+        icon={<FiTrash2 size={18} />}
       />
     </ButtonsActions>
   );
