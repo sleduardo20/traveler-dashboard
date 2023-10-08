@@ -1,22 +1,21 @@
 import { ReactElement } from 'react';
-import { Pages } from '../../../entities/Pages';
 import { Header } from '../../components/Header';
 import { SideBar } from '../../components/SideBar';
 import { styled } from '../../styles';
+import { useCurrentPage } from '../../hooks/useCurrentPage';
+import { useRouter } from 'next/router';
 
 interface LayoutDefaultProps {
   children: ReactElement;
 }
 
 export const LayoutDefault = ({ children }: LayoutDefaultProps) => {
+  const router = useRouter();
+  const currentPage = useCurrentPage();
+
   return (
     <Container>
-      <Header
-        page={Pages.LIST_CITIES}
-        goProfile={() => {}}
-        title="Edit"
-        subtitle="Blumenau"
-      />
+      <Header page={currentPage} goBack={router.back} />
       <SideBar
         onCities={() => {}}
         onComments={() => {}}

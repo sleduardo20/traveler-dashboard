@@ -30,6 +30,7 @@ const Container = styled('div', {
   position: 'absolute',
   top: 0,
   alignItems: 'center',
+  zIndex: 100,
   flexDirection: 'column',
   justifyContent: 'space-between',
   padding: '$sm 0',
